@@ -26,6 +26,7 @@
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.44.0",
+    "@types/mocha": "^10.0.6",
     "@types/node": "^20.12.10",
     "dotenv": "^16.4.1",
     "eslint": "^8.56.0",
