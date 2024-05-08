@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "target": "es6",
+        "moduleResolution": "node",
+        "module": "CommonJS",
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "./dist",
+        "rootDir": "./",
+        "lib": ["es6", "dom"],
+        "types": [
+            "node",
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "paths": {
+            "e2e/*": ["e2e/*"]
+        }
+    }
+  }
