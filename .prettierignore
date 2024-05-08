@@ -1,0 +1,8 @@
+*.json
+.github
+.prettierrc
+*.d.ts
+.eslintrc.js
+dist
+.history
+playwright-report

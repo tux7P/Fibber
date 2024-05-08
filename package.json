@@ -3,12 +3,37 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky",
+    "lint:check": "prettier . --check && eslint .",
+    "lint:fix": "prettier . --write && eslint . --fix",
+    "lint:staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:staged"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.44.0",
-    "@types/node": "^20.12.10"
+    "@types/node": "^20.12.10",
+    "eslint": "^9.2.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-chai-friendly": "^0.7.4",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-playwright": "^1.6.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^3.2.4"
   }
 }
