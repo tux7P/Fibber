@@ -15,9 +15,11 @@
         "lib": ["es6", "dom"],
         "types": [
             "node",
+         "mocha"   
         ],
         "typeRoots": [
             "node_modules/@types"
+
         ],
         "paths": {
             "e2e/*": ["e2e/*"]
