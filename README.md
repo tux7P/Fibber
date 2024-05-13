@@ -32,6 +32,7 @@ npx playwright test tests/* --grep '@regression'
 ```
 
 ### Improvements planned:
+* [ ] Improve documentation  
 * [ ] Nightly run setup in GithubActions
 * [ ] Setup to run seperate environments (dev, test, live)
 * [ ] Docker Setup
