@@ -12,7 +12,7 @@
 
 ```bash
 # Clone the repository
-git clone ..
+git clone git@github.com:tux7P/Fibber.git
 
 # Install Dependencies
 npm i
