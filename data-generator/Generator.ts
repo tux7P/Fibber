@@ -12,6 +12,10 @@ class Generator {
   generateLastName(): string {
     return faker.person.lastName();
   }
+
+  generatePassword(): string {
+    return faker.internet.password();
+  }
 }
 
 export default new Generator();
