@@ -1,4 +1,4 @@
-Features Implemented:
+### Features Implemented:
 * Page object model with fixtures
 * UI and API tests
 * Type guards through Typescript
@@ -7,7 +7,7 @@ Features Implemented:
 * Linting through Eslint, Prettier 
 * Precommit linting check through Husky  
 
-How to run this code:
+
 ### To Run Tests
 
 ```bash
@@ -31,7 +31,7 @@ npx playwright test tests/* --grep '@regression'
 
 ```
 
-Improvements planned:
+### Improvements planned:
 * [ ] Nightly run setup in GithubActions
 * [ ] Setup to run seperate environments (dev, test, live)
 * [ ] Docker Setup
