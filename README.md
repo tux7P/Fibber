@@ -11,9 +11,9 @@ How to run this code:
 1. `npm init playwright@latest`
 
 Improvements planned:
-[ ] Nightly run setup in GithubActions
-[ ] Setup to run seperate environments (dev, test, live)
-[ ] Docker Setup
-[ ] Stub internal api to verify the final action 
-[ ] Setup multi browser and resolutions for UI tests
+* [ ] Nightly run setup in GithubActions
+* [ ] Setup to run seperate environments (dev, test, live)
+* [ ] Docker Setup
+* [ ] Stub internal api to verify the final action 
+* [ ] Setup multi browser and resolutions for UI tests
 
