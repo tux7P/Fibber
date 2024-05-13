@@ -7,17 +7,27 @@ export class Navigation {
     this.page = page;
   }
 
-  async openBaseUrl(): Promise<void> {
-    await this.page.goto('https://test.cv.ee/en');
+  async openBaseUrlWithEnTranslation(): Promise<void> {
+    await this.page.goto('/en');
   }
 
-  async isCookiesAcceptanceElementPresent() {
-    const cookiesAcceptanceElement = await this.page.$('#c-p-bn');
-    return cookiesAcceptanceElement !== null;
+  async isCookiesBannerPresent() {
+    const cookiesBanner = await this.page.$('#cm');
+    return cookiesBanner !== null;
   }
 
   async acceptCookies(): Promise<void> {
     await this.page.locator('#c-p-bn').click();
+  }
+
+  async openHomePage(): Promise<void> {
+    await this.openBaseUrlWithEnTranslation();
+
+    if (await this.isCookiesBannerPresent()) {
+      await this.acceptCookies();
+    }
+
+    await this.page.waitForLoadState('domcontentloaded');
   }
 
   async openLoginRegisterModal(): Promise<void> {

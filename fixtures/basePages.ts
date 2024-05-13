@@ -1,10 +1,12 @@
 import {test as base} from '@playwright/test';
-import {Navigation} from '../base/pages/Navigation';
-import {RegistrationModal} from '../registration/pages/RegistrationModal';
+import {Navigation} from '../packages/ui/pages/Navigation';
+import {RegistrationModal} from '../packages/ui/pages/RegisterModal';
+import {RegistrationClient} from '../packages/api/clients/RegistrationClient';
 
 interface CvOnlineFixtures {
   navigation: Navigation;
   registrationModal: RegistrationModal;
+  registrationClient: RegistrationClient;
 }
 
 export const test = base.extend<CvOnlineFixtures>({
@@ -13,6 +15,9 @@ export const test = base.extend<CvOnlineFixtures>({
   },
   registrationModal: async ({page}, use) => {
     await use(new RegistrationModal(page));
+  },
+  registrationClient: async ({request}, use) => {
+    await use(new RegistrationClient(request));
   },
 });
 

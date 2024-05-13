@@ -7,7 +7,12 @@
     "prepare": "husky",
     "lint:check": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "e2e:regression": "npx playwright test tests/* --grep '@regression'",
+    "e2e:smoke": "npx playwright test tests/* --grep '@smoke'",
+    "e2e:ui": "npx playwright test tests/* --grep '@ui'",
+    "e2e:api": "npx playwright test tests/* --grep '@api'",
+    "e2e:report": "npx playwright show-report"
   },
   "lint-staged": {
     "*.{js,ts}": [
