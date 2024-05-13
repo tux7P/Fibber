@@ -8,7 +8,28 @@ Features Implemented:
 * Precommit linting check through Husky  
 
 How to run this code:
-1. `npm init playwright@latest`
+### To Run Tests
+
+```bash
+# Clone the repository
+git clone ..
+
+# Install Dependencies
+npm i
+
+# To run all the tests in headless mode
+npx playwright test
+
+# To run only UI tests 
+npx playwright test tests/* --grep '@ui'
+
+# To run only API tests 
+npx playwright test tests/* --grep '@api'
+
+# To run all the regression tests 
+npx playwright test tests/* --grep '@regression'
+
+```
 
 Improvements planned:
 * [ ] Nightly run setup in GithubActions
