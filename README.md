@@ -29,6 +29,9 @@ npx playwright test tests/* --grep '@api'
 # To run all the regression tests 
 npx playwright test tests/* --grep '@regression'
 
+# To see the test report after a test run
+npx playwright show-report
+
 ```
 
 ### Improvements planned:
