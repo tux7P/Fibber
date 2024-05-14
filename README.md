@@ -1,4 +1,5 @@
 ### Features Implemented:
+* Test structure follows Arrange, Act and Assert (AAA) Pattern
 * Page object model with fixtures
 * UI and API tests
 * Type guards through Typescript
