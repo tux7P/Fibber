@@ -9,9 +9,9 @@ test.describe(`UI - Registration Tests ${tags.TestType.Regression}  ${tags.TestT
 
   test('Verify user can register successfully through UI', async ({registrationModal}) => {
     const email: string = Generator.generateEmail();
-    const password = Generator.generatePassword();
-    const firstName = Generator.generateFirstName();
-    const lastName = Generator.generateLastName();
+    const password: string = Generator.generatePassword();
+    const firstName: string = Generator.generateFirstName();
+    const lastName: string = Generator.generateLastName();
 
     await registrationModal.goToRegistrationForm();
     await registrationModal.registerNewUser(email, password, firstName, lastName);
@@ -20,9 +20,9 @@ test.describe(`UI - Registration Tests ${tags.TestType.Regression}  ${tags.TestT
 
   test('Verify duplicate email error through UI', async ({registrationModal}) => {
     const duplicateEmail: string = 'test@test.com';
-    const password = Generator.generatePassword();
-    const firstName = Generator.generateFirstName();
-    const lastName = Generator.generateLastName();
+    const password: string = Generator.generatePassword();
+    const firstName: string = Generator.generateFirstName();
+    const lastName: string = Generator.generateLastName();
 
     await registrationModal.goToRegistrationForm();
     await registrationModal.registerNewUser(duplicateEmail, password, firstName, lastName);
@@ -33,9 +33,9 @@ test.describe(`UI - Registration Tests ${tags.TestType.Regression}  ${tags.TestT
     registrationModal,
   }) => {
     const email: string = Generator.generateEmail();
-    const password = '1234'; // Password length is less than 6 characters
-    const firstName = Generator.generateFirstName();
-    const lastName = Generator.generateLastName();
+    const password: string = '1234'; // Password length is less than 6 characters
+    const firstName: string = Generator.generateFirstName();
+    const lastName: string = Generator.generateLastName();
 
     await registrationModal.goToRegistrationForm();
     await registrationModal.registerNewUser(email, password, firstName, lastName);
