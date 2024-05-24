@@ -41,6 +41,6 @@ npx playwright show-report
 * [ ] Nightly run setup in GithubActions
 * [ ] Setup to run seperate environments (dev, test, live)
 * [ ] Docker Setup
-* [ ] Stub internal api to verify the final action 
+* [ ] Intercepting API to verify the final action 
 * [ ] Setup multi browser and resolutions for UI tests
 
