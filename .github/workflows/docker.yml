@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Docker Playwright Tests
 on:
   push:
     branches: [ main, master ]
